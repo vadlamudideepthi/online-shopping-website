@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background-color: #6d28d9;
+    padding: 18px 7%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ddd6fe;
+}
+
+.cart {
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #6d28d9;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #f3e8ff;
+}
+
+/* Common Sections */
+section {
+    padding: 60px 7%;
+}
+
+section h2 {
+    text-align: center;
+    color: #6d28d9;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* Categories */
+.categories {
+    background-color: white;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    width: 230px;
+    background-color: #faf5ff;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid #e9d5ff;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    color: #6d28d9;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #666;
+}
+
+/* Products */
+.products {
+    background-color: #f5f5f5;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.product-card {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-image {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf5ff;
+    border-radius: 8px;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #6d28d9;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #6d28d9;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.product-card button:hover {
+    background-color: #5b21b6;
+}
+
+/* Offer */
+.offer {
+    background: linear-gradient(135deg, #4c1d95, #7c3aed);
+    color: white;
+    text-align: center;
+}
+
+.offer h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.offer p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.offer-btn {
+    display: inline-block;
+    background-color: white;
+    color: #6d28d9;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* About */
+.about {
+    background-color: white;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #555;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background-color: #f3e8ff;
+}
+
+.contact-info p {
+    margin: 12px;
+    font-size: 17px;
+}
+
+/* Footer */
+footer {
+    background-color: #4c1d95;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+}
+
